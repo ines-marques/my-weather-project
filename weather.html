@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c1bdea5725.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>
+            <i class="fas fa-sun"></i>
+            <span id="current-temperature">16ºC</span>
+          </h1>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li id="current-city">Porto</li>
+            <li id="current-time">Wednesday, 16:17</li>
+            <li>Sunny</li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <form id="search-city">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter a city"
+            aria-describedby="button-addon2"
+            id="write-city"
+          />
+          <button class="btn btn-outline-secondary" type="button">GO</button>
+        </div>
+      </form>
+      <br />
+      <div class="container2">
+        <div class="row row-cols-5">
+          <div class="col">
+            <i class="far fa-sun"></i>
+            <p class="celsius">15ºC</p>
+            <p class="weekday">Thu</p>
+          </div>
+          <div class="col">
+            <i class="fas fa-cloud-sun"></i>
+            <p class="celsius">13ºC</p>
+            <p class="weekday">Fri</p>
+          </div>
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+            <p class="celsius">12ºC</p>
+            <p class="weekday">Sat</p>
+          </div>
+          <div class="col">
+            <i class="far fa-sun"></i>
+            <p class="celsius">17ºC</p>
+            <p class="weekday">Sun</p>
+          </div>
+          <div class="col">
+            <i class="far fa-sun"></i>
+            <p class="celsius">21ºC</p>
+            <p class="weekday">Mon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
