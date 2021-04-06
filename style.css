@@ -1,10 +1,7 @@
 .container {
   border: 10px solid rgba(122, 160, 203, 0.7);
   border-radius: 12px;
-  padding: 20px;
-  width: 50%;
   margin: 30px;
-  background: #f9f9f9;
 }
 .container2 {
   text-align: center;
