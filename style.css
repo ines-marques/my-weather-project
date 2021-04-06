@@ -66,3 +66,8 @@ div.col {
 footer {
   text-align: center;
 }
+form {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
