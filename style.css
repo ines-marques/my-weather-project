@@ -24,21 +24,24 @@ h1 i {
 #fahrenheit {
   text-decoration: none;
   font-size: 16px;
+  color: gray;
+  cursor: default;
 }
 #space {
   font-size: 16px;
 }
 span {
   font-size: 50px;
-  color: #93b3cf;
+  color: gray;
   font-weight: 400;
 }
 ul {
   list-style: none;
-  color: #93b3cf;
+  color: gray;
   text-align: right;
   font-size: 24px;
   padding: 5px;
+  line-height: 1.6;
 }
 .col-1 {
   font-size: 20px;
@@ -84,4 +87,40 @@ form {
 .showing {
   cursor: default;
   color: gray;
+}
+
+#percentage,
+#value {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+#precipitation,
+#wind {
+  font-size: 15px;
+  color: gray;
+  display: block;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+#precipitation {
+  padding-top: 15px;
+}
+
+#windtext,
+#wind {
+  font-size: 15px;
+  display: inline;
+  letter-spacing: 1.5px;
+}
+
+#precipitation,
+#windtext {
+  display: block;
+  letter-spacing: 1.5px;
+}
+
+#description {
+  text-transform: capitalize;
 }

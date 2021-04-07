@@ -25,6 +25,11 @@
       function changeTemperature(response) {
         document.querySelector("#current-temperature").innerHTML = `${Math.round(response.data.main.temp)}`;
         document.querySelector("#current-city").innerHTML = response.data.name;
+        document.querySelector("#wind").innerHTML = `${Math.round(response.data.wind.speed)}`;
+        document.querySelector("#percentage").innerHTML = response.data.main.humidity;
+        document.querySelector("#description").innerHTML = response.data.weather[0].description;
+        document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+        document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 
         celsiusTemperature = response.data.main.temp;
       }
@@ -56,8 +61,9 @@
         fahrenheit.classList.remove("showing")
         let temperatureElement = document.querySelector("#current-temperature");
         temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
       }
+
+
 
       let fahrenheit = document.querySelector("#fahrenheit");
       fahrenheit.addEventListener("click", showFahrenheitTemperature);
@@ -66,3 +72,5 @@
       celsius.addEventListener("click", showCelsiusTemperature)
 
       let celsiusTemperature = null;
+
+      searchCity("Lisbon")
