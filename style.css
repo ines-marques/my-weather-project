@@ -47,34 +47,7 @@ ul {
   font-size: 20px;
   color: #93b3cf;
 }
-i.far.fa-sun {
-  color: #ffc93c;
-}
-i.fas.fa-cloud-sun {
-  color: darkgray;
-}
-i.fas.fa-cloud-sun-rain {
-  color: gray;
-}
-div.row.row-cols-5 {
-  font-size: 44px;
-}
-p.tempo {
-  font-size: 18px;
-  color: #93b3cf;
-  font-weight: 600;
-}
-p.weekday {
-  font-size: 16px;
-  color: #a9a9a9;
-  line-height: 1px;
-}
 
-div.col {
-  border: 1px solid rgba(122, 160, 203, 0.4);
-  border-radius: 4px;
-  margin: 16px;
-}
 footer {
   text-align: center;
 }
