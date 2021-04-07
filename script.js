@@ -23,7 +23,7 @@
       form.addEventListener("submit", searching);
 
       function changeTemperature(response) {
-        document.querySelector("#current-temperature").innerHTML = `${Math.round(response.data.main.temp)}ºC`;
+        document.querySelector("#current-temperature").innerHTML = `${Math.round(response.data.main.temp)}`;
         document.querySelector("#current-city").innerHTML = response.data.name;
       }
 
