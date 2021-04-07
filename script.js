@@ -13,6 +13,30 @@
 
       currentTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
+      function displayForecast(response) {
+        console.log(response.data.daily)
+        let forecastElement = document.querySelector("#forecast");
+        let forecastHTML = `<div class="row">`;
+        let days = ["Wed", "Thu"];
+        days.forEach(function(day) {
+          forecastHTML = forecastHTML + `
+          <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" 
+            alt=""
+            width="42"/>
+            <div class="weather-forecast-temperature">
+              <span class="temperature-max">18</span>
+              <span class="temperature-min">12</span>
+            </div>
+          </div>
+      `;
+        });
+        
+      forecastHTML = forecastHTML + `</div>`;
+      forecastElement.innerHTML = forecastHTML;
+      }
+
       function changeCity(event) {
         event.preventDefault();
         let searchInput = document.querySelector("#write-city");
@@ -21,6 +45,12 @@
       }
       let form = document.querySelector("#search-city");
       form.addEventListener("submit", searching);
+
+      function getForecast(coordinates) {
+        let apiKey = "178be0a79146aa22863d056738d4f9b4";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayForecast);
+      }
 
       function changeTemperature(response) {
         document.querySelector("#current-temperature").innerHTML = `${Math.round(response.data.main.temp)}`;
@@ -32,6 +62,8 @@
         document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 
         celsiusTemperature = response.data.main.temp;
+
+        getForecast(response.data.coord);
       }
 
       function searchCity(city) {
@@ -39,6 +71,8 @@
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
         axios.get(url).then(changeTemperature);
       }
+
+
 
       function searching (event) {
         event.preventDefault();
