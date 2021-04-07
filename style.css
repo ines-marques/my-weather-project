@@ -97,3 +97,26 @@ form {
 #description {
   text-transform: capitalize;
 }
+
+.weather-forecast {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  color: gray;
+}
+
+.temperature-max,
+.temperature-min {
+  font-size: 16px;
+  text-align: center;
+}
+
+div.weather-forecast-temperature {
+  display: block;
+}
+
+.temperature-min {
+  opacity: 0.5;
+}
