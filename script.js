@@ -25,6 +25,8 @@
       function changeTemperature(response) {
         document.querySelector("#current-temperature").innerHTML = `${Math.round(response.data.main.temp)}`;
         document.querySelector("#current-city").innerHTML = response.data.name;
+
+        celsiusTemperature = response.data.main.temp;
       }
 
       function searchCity(city) {
@@ -38,3 +40,29 @@
         let city = document.querySelector("#write-city").value
         searchCity(city)
       }
+
+      function showFahrenheitTemperature (event) {
+        event.preventDefault();
+        let fahrenheitConversion = (celsiusTemperature * 9) / 5 + 32;
+        let temperatureElement = document.querySelector("#current-temperature");
+        celsius.classList.remove("showing");
+        fahrenheit.classList.add("showing");
+        temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+      }
+
+      function showCelsiusTemperature (event) {
+        event.preventDefault();
+        celsius.classList.add("showing");
+        fahrenheit.classList.remove("showing")
+        let temperatureElement = document.querySelector("#current-temperature");
+        temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+      }
+
+      let fahrenheit = document.querySelector("#fahrenheit");
+      fahrenheit.addEventListener("click", showFahrenheitTemperature);
+
+      let celsius = document.querySelector("#celsius");
+      celsius.addEventListener("click", showCelsiusTemperature)
+
+      let celsiusTemperature = null;
