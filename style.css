@@ -1,53 +1,50 @@
-.container {
-  border: 10px solid rgba(122, 160, 203, 0.7);
-  border-radius: 12px;
-  margin: 30px;
-}
-.container2 {
-  text-align: center;
-  padding: 20px;
-}
-div.row.up {
-  margin: 5px;
-}
 body {
   padding: 20px 0;
-  display: block;
-  margin: 0 auto;
 }
-h1 i {
-  color: #ffc93c;
-  display: inline;
-  font-size: 100px;
+.container {
+  border: 6px solid rgba(153, 153, 153, 0.8);
+  border-radius: 12px;
+  margin: 30px;
+  font-family: "Poppins", sans-serif;
+}
+.row.up {
+  margin: 5px;
+}
+#oneline,
+#twolines {
+  display: block;
+  line-height: 4px;
+  font-size: 16px;
 }
 #celsius,
 #fahrenheit {
   text-decoration: none;
   font-size: 16px;
-  color: gray;
   cursor: default;
+}
+.showing {
+  color: black;
 }
 #space {
   font-size: 16px;
 }
 span {
-  font-size: 50px;
-  color: gray;
+  font-size: 48px;
+  color: #555555;
   font-weight: 400;
+  letter-spacing: 2px;
 }
 ul {
   list-style: none;
-  color: gray;
+  color: #777777;
   text-align: right;
   font-size: 24px;
   padding: 5px;
   line-height: 1.6;
 }
-.col-1 {
-  font-size: 20px;
-  color: #93b3cf;
+h1 {
+  color: #555555;
 }
-
 footer {
   text-align: center;
 }
@@ -57,66 +54,72 @@ form {
   margin: 0 auto;
 }
 
-.showing {
-  cursor: default;
-  color: gray;
+div.col-2 {
+  border: 1px solid rgba(153, 153, 153, 0.5);
+  border-radius: 4px;
+  margin: 12px;
 }
-
 #percentage,
 #value {
   font-size: 15px;
   letter-spacing: 2px;
 }
-
 #precipitation,
 #wind {
   font-size: 15px;
-  color: gray;
-  display: block;
+  color: #555555;
   font-weight: normal;
   letter-spacing: 1.5px;
 }
-
 #precipitation {
   padding-top: 15px;
 }
-
 #windtext,
 #wind {
   font-size: 15px;
   display: inline;
   letter-spacing: 1.5px;
 }
-
 #precipitation,
 #windtext {
-  display: block;
   letter-spacing: 1.5px;
 }
-
 #description {
   text-transform: capitalize;
 }
-
 .weather-forecast {
   margin-top: 5px;
   text-align: center;
 }
-
 .weather-forecast-date {
-  color: gray;
+  color: #555555;
 }
-
 .temperature-max,
 .temperature-min {
   font-size: 16px;
   text-align: center;
 }
-
-div.weather-forecast-temperature {
+.weather-forecast-temperature {
   display: block;
+  color: #555555;
+  font-size: 10px;
 }
-
 .temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background-blend-mode: normal, lighten, soft-light;
+  transition: all 500ms ease-in-out;
 }
